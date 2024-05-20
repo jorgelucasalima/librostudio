@@ -4,9 +4,10 @@
 composer install
 
 - banco
--- mysql
+-- criar banco no mysql chamado librostudio
 -- criar usuário chamado librostudio e senha librostudio no seu mysql
 
+- Incluir no seu .env:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
