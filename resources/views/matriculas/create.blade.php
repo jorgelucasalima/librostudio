@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div>
+    <div class="container form">
         <h2>Nova Matrícula</h2>
         <form action="{{ route('matriculas.store') }}" method="POST">
             @csrf

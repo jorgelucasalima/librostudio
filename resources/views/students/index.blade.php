@@ -1,21 +1,23 @@
 @extends('layout')
 
 @section('content')
-    <div>
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <h2>Alunos</h2>
-        <a href="{{ route('students.create') }}">Adicionar</a>
+       
 
          {{-- Formulário de pesquisa por nome --}}
         <form action="{{ route('students.index') }}" method="GET">
             <input type="text" name="name" placeholder="Pesquisar" value="{{ request()->input('name') }}">
             <button type="submit">Pesquisar</button>
         </form>
+
+         <a href="{{ route('students.create') }}">Adicionar</a>
         
 
         @if ($message = Session::get('success'))
             <p>{{ $message }}</p>
         @endif
-        <table>
+        <table class="table table-striped">
             <tr>
                 <th>Nome</th>
                 <th>Email</th>

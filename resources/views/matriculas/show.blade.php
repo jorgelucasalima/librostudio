@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div>
+    <div class="container">
         <h2>Detalhes da Matrícula</h2>
         <p><strong>Aluno:</strong> {{ $matricula->student->name }}</p>
         <p><strong>Curso:</strong> {{ $matricula->course->title }}</p>

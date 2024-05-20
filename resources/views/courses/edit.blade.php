@@ -1,12 +1,12 @@
 @extends('layout')
 
 @section('content')
-    <div>
+    <div class="container form">
         <h2>Editar Curso</h2>
-        <form action="{{ route('courses.update', $course->id) }}" method="POST">
+        <form action="{{ route('courses.update', $course->id) }}" method="POST" class="form">
             @csrf
             @method('PUT')
-            <div>
+            <div >
                 <label for="title">Titulo:</label>
                 <input type="text" name="title" id="title" value="{{ $course->title }}" required>
             </div>

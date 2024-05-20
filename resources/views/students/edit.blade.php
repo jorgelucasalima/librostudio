@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <div>
+    <div class="container form">
         <h2>Editar aluno</h2>
-        <form action="{{ route('students.update', $student->id) }}" method="POST">
+        <form action="{{ route('students.update', $student->id) }}" method="POST" class="form edit">
             @csrf <!-- Token CSRF para proteção -->
             @method('PUT')
             <div>

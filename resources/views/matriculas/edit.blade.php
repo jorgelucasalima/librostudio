@@ -1,12 +1,12 @@
 @extends('layout')
 
 @section('content')
-    <div>
+    <div class="container form edit">
         <h2>Editar Matrícula</h2>
-        <form action="{{ route('matriculas.update', $matricula->id) }}" method="POST">
+        <form action="{{ route('matriculas.update', $matricula->id) }}" method="POST" class="form edit">
             @csrf
             @method('PUT')
-            <div>
+            <div class="form-group">
                 <label for="student_id">Aluno:</label>
                 <select name="student_id" id="student_id">
                     @foreach ($students as $student)
@@ -14,7 +14,7 @@
                     @endforeach
                 </select>
             </div>
-            <div>
+            <div class="form-group">
                 <label for="course_id">Curso:</label>
                 <select name="course_id" id="course_id">
                     @foreach ($courses as $course)

@@ -1,15 +1,21 @@
 @extends('layout')
 
 @section('content')
-    <div>
+    <div class="container">
         <h2>Matriculas</h2>
-        <a href="{{ route('matriculas.create') }}">Adicionar</a>
-        <a href="{{ route('relatorios.index') }}">Relatorio</a>
         
-        @if ($message = Session::get('success'))
-            <p>{{ $message }}</p>
-        @endif
-        <table>
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            
+            <a href="{{ route('relatorios.index') }}">Relatorio</a>
+            <a href="{{ route('matriculas.create') }}">Adicionar</a>
+            
+            @if ($message = Session::get('success'))
+                <p>{{ $message }}</p>
+            @endif
+        </div>
+       
+
+        <table class="table table-striped">
             <tr>
                 <th>Alunos</th>
                 <th>Curso</th>
